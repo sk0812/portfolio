@@ -1,7 +1,7 @@
 "use client";
 import { motion } from "framer-motion";
 import { NavMenu } from "./NavMenu";
-import { ContactButton } from "./ContactButton";
+import { SocialIcons } from "./SocialIcons";
 
 export const Navbar = () => {
   return (
@@ -9,10 +9,10 @@ export const Navbar = () => {
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       transition={{ duration: 0.5 }}
-      className="fixed top-0 left-0 right-0 z-50 pt-8"
+      className="h-28 relative z-50"
     >
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex items-center justify-between h-20">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-full flex items-center">
+        <div className="flex items-center justify-between w-full">
           {/* Logo/Name */}
           <motion.div
             whileHover={{ scale: 1.05 }}
@@ -24,8 +24,8 @@ export const Navbar = () => {
           {/* Navigation Menu */}
           <NavMenu />
 
-          {/* Contact Button */}
-          <ContactButton />
+          {/* Social Icons */}
+          <SocialIcons />
         </div>
       </div>
     </motion.nav>

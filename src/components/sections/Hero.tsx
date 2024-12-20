@@ -1,18 +1,20 @@
 "use client";
-import AnimatedGridPattern from "./ui/animated-grid-pattern";
+import AnimatedGridPattern from "../ui/animated-grid-pattern";
 import { cn } from "@/lib/utils";
 import { motion } from "framer-motion";
-import { ProfileGreeting } from "./hero/ProfileGreeting";
-import { ConnectButton } from "./hero/ConnectButton";
-import { BottomText } from "./hero/BottomText";
-import { SocialLinks } from "./hero/SocialLinks";
+import { ProfileGreeting } from "../hero/ProfileGreeting";
+import { ConnectButton } from "../hero/ConnectButton";
+import { BottomText } from "../hero/BottomText";
 
-const HeroSection = () => {
+const Hero = () => {
   return (
     <>
-      <div className="fixed inset-0 w-full h-full dark:bg-black bg-white">
+      {/* Animated background only for hero */}
+      <div className="absolute inset-0 w-full h-full">
         <AnimatedGridPattern
-          numSquares={45}
+          numSquares={40}
+          height={70}
+          width={70}
           maxOpacity={0.1}
           duration={2}
           repeatDelay={1}
@@ -23,8 +25,8 @@ const HeroSection = () => {
         />
       </div>
 
-      <div className="pb-20 pt-36 sm:p-0 sm:min-h-screen flex flex-col items-center justify-center relative">
-        <div className="flex flex-col justify-center items-center relative z-10 text-center max-w-7xl mx-auto px-4">
+      <div className="h-[calc(100vh-7rem)] flex flex-col relative">
+        <div className="flex-1 flex flex-col justify-center items-center relative z-10 text-center max-w-7xl mx-auto px-4">
           <ProfileGreeting />
 
           {/* Main Title with Positioned Elements */}
@@ -41,7 +43,7 @@ const HeroSection = () => {
               className="text-7xl font-bold leading-[1] inline-flex flex-col items-center gap-2"
             >
               <div className="flex items-center gap-4">
-                <span className="text-violet-400">SOFTWARE</span>
+                <span className="text-violet-400">DEVELOPER,</span>
                 <div className="text-white/80 text-lg flex flex-col items-start gap-0 -mt-1">
                   <div>
                     <span className="text-white/50">//</span> Based in
@@ -49,7 +51,7 @@ const HeroSection = () => {
                   <div>London, UK</div>
                 </div>
               </div>
-              <span className="text-amber-400 -mt-2">ENGINEER,</span>
+              <span className="text-amber-400 -mt-2">DESIGNER,</span>
               <div className="flex items-center gap-2 -mt-2">
                 <span className="text-slate-100">STUDENT</span>
                 <ConnectButton />
@@ -70,11 +72,10 @@ const HeroSection = () => {
           </div>
 
           <BottomText />
-          <SocialLinks />
         </div>
       </div>
     </>
   );
 };
 
-export default HeroSection;
+export default Hero;
