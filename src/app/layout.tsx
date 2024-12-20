@@ -8,7 +8,7 @@ const raleway = Raleway({ subsets: ["latin"] });
 export const metadata: Metadata = {
   title: {
     template: "Sid Kheria - %s",
-    default: "Andrija - software engineer",
+    default: "Sid Kheria - software engineer",
   },
   description: "Siddhanth Kheria, software engineer, entrepreneur, student.",
 };
