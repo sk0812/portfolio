@@ -1,4 +1,4 @@
-import "@/app/_styles/globals.css";
+import "@/app/globals.css";
 import type { Metadata } from "next";
 import { Raleway } from "next/font/google";
 import { ThemeProvider } from "../components/ThemeProvider";
