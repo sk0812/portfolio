@@ -5,6 +5,7 @@ import { motion } from "framer-motion";
 import { ProfileGreeting } from "./hero/ProfileGreeting";
 import { ConnectButton } from "./hero/ConnectButton";
 import { BottomText } from "./hero/BottomText";
+import { SocialLinks } from "./hero/SocialLinks";
 
 const HeroSection = () => {
   return (
@@ -69,6 +70,7 @@ const HeroSection = () => {
           </div>
 
           <BottomText />
+          <SocialLinks />
         </div>
       </div>
     </>
